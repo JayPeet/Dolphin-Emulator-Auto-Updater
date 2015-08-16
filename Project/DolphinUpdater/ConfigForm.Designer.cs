@@ -33,6 +33,8 @@
             this.dir = new System.Windows.Forms.TextBox();
             this.dev = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.show_updater = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -73,7 +75,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(549, 72);
+            this.button1.Location = new System.Drawing.Point(549, 124);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 5;
@@ -81,11 +83,34 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // show_updater
+            // 
+            this.show_updater.AutoSize = true;
+            this.show_updater.Checked = true;
+            this.show_updater.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.show_updater.Location = new System.Drawing.Point(424, 128);
+            this.show_updater.Name = "show_updater";
+            this.show_updater.Size = new System.Drawing.Size(18, 17);
+            this.show_updater.TabIndex = 7;
+            this.show_updater.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Courier New", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 119);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(388, 31);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Show Updater on Launch";
+            // 
             // ConfigForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(636, 113);
+            this.ClientSize = new System.Drawing.Size(636, 159);
+            this.Controls.Add(this.show_updater);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dev);
             this.Controls.Add(this.dir);
@@ -109,5 +134,7 @@
         private System.Windows.Forms.TextBox dir;
         private System.Windows.Forms.CheckBox dev;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox show_updater;
+        private System.Windows.Forms.Label label3;
     }
 }

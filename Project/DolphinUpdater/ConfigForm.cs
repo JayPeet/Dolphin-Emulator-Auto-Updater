@@ -39,8 +39,16 @@ namespace DolphinUpdater
                             else{
                             
                             }
+                        break;
 
-                            
+                        case 3:
+                        if (line == "1")
+                        {
+                            show_updater.Checked = true;
+                        }
+                        else {
+                            show_updater.Checked = false;
+                        }
                         break;
                     }
                     c++;
@@ -68,6 +76,14 @@ namespace DolphinUpdater
             {
                 writer.WriteLine("0");
             }
+            if (show_updater.Checked == true)
+            {
+                writer.WriteLine("1");
+            }
+            else
+            {
+                writer.WriteLine("0");
+            }
             writer.Close();
             
         }
@@ -83,6 +99,13 @@ namespace DolphinUpdater
             }
             else
             {
+                writer.WriteLine("0");
+            }
+            if (show_updater.Checked == true)
+            {
+                writer.WriteLine("1");
+            }
+            else {
                 writer.WriteLine("0");
             }
             writer.Close();

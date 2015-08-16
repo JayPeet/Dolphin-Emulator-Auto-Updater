@@ -15,15 +15,9 @@ namespace DolphinUpdater
         String DolphinVer = "0";
         String BuildType = "Stable";
         Boolean Downloading = false;
-        WebClient webClient;               // Our WebClient that will be doing the downloading for us
-        Stopwatch sw = new Stopwatch();    // The stopwatch which we will be using to calculate the download speed
-
+        WebClient webClient;               // Webclient which is used to download the updates.
+        Stopwatch sw = new Stopwatch();    // Stopwatch for calculating download speeds
         public DolphinLauncher()
-        {
-            InitializeComponent();
-        }
-
-        private void DolphinLauncher_Load(object sender, EventArgs e)
         {
             //Read Config
             String Path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
@@ -40,36 +34,63 @@ namespace DolphinUpdater
                 c_form.ShowDialog();
                 Config = true;
             }
-            else { 
+            else
+            {
+
+                //Check if user is holding down shift. If so, show config menu.
+                if (Control.ModifierKeys == Keys.Shift)
+                {
+                    ConfigForm c_form = new ConfigForm();
+                    this.Hide();
+                    c_form.ShowDialog();
+                    Config = true;
+                    return;
+                }
+
                 //Load Config
                 TextReader reader = File.OpenText(Path + "\\config.ini");
                 String line = "";
                 Int16 c = 0;
                 while ((line = reader.ReadLine()) != null)
                 {
-                    switch(c)
+                    switch (c)
                     {
                         case 0:
                             DolphinDir = line;
-                        break;
+                            break;
                         case 1:
-                             DolphinVer = line;
-                        break;
+                            DolphinVer = line;
+                            break;
                         case 2:
-                             BuildType = line;
-                        break;
+                            BuildType = line;
+                            break;
+                        case 3:
+                            if (line == "1")
+                            {
+                                this.Visible = true;
+                            }
+                            else
+                            {
+                                this.Visible = false;
+                            }
+                            break;
                     }
                     c++;
                 }
                 reader.Close();
             }
-           
+            InitializeComponent();
+            Thread1.RunWorkerAsync();
         }
 
-        private void DolphinLauncher_Shown(object sender, EventArgs e)
+        protected override void SetVisibleCore(bool value)
         {
-
-               Thread1.RunWorkerAsync();
+            if (!IsHandleCreated && value)
+            {
+                value = false;
+                CreateHandle();
+            }
+            base.SetVisibleCore(value);
         }
 
         private void Thread1_DoWork(object sender, DoWorkEventArgs e)
@@ -110,6 +131,13 @@ namespace DolphinUpdater
                     Download_Link = link.Attributes["href"].Value;
                     break;
                 }
+
+                //Get update information.
+                foreach (HtmlNode link in doc.DocumentNode.SelectNodes("//div[@id='download-dev']/table/tbody/tr[@class='infos']/td[@class='description always-ltr']"))
+                {
+                    Update_Text.Text = "Downloading Version : " + Version + "" + System.Environment.NewLine + link.InnerText;
+                    break;
+                }
                 Download(Download_Link, DolphinDir + "\\update.7z");
                 Downloading = true;
             }
@@ -119,6 +147,7 @@ namespace DolphinUpdater
                     Download_Link = link.Attributes["href"].Value;
                     break;
                 }
+                Update_Text.Text = "Downloading New Stable Build Version : " + Version;
                 Download(Download_Link, DolphinDir + "\\update.exe");
                 Downloading = true;
             }

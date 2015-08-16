@@ -32,6 +32,7 @@
             this.DownloadBar = new System.Windows.Forms.ProgressBar();
             this.speed = new System.Windows.Forms.Label();
             this.Downloaded = new System.Windows.Forms.Label();
+            this.Update_Text = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Thread1
@@ -61,18 +62,26 @@
             this.Downloaded.Size = new System.Drawing.Size(0, 17);
             this.Downloaded.TabIndex = 5;
             // 
+            // Update_Text
+            // 
+            this.Update_Text.Location = new System.Drawing.Point(20, 69);
+            this.Update_Text.Multiline = true;
+            this.Update_Text.Name = "Update_Text";
+            this.Update_Text.Size = new System.Drawing.Size(521, 107);
+            this.Update_Text.TabIndex = 6;
+            this.Update_Text.Text = "Initializing...";
+            // 
             // DolphinLauncher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(564, 61);
+            this.ClientSize = new System.Drawing.Size(564, 188);
+            this.Controls.Add(this.Update_Text);
             this.Controls.Add(this.Downloaded);
             this.Controls.Add(this.speed);
             this.Controls.Add(this.DownloadBar);
             this.Name = "DolphinLauncher";
             this.Text = "Dolphin Launcher";
-            this.Load += new System.EventHandler(this.DolphinLauncher_Load);
-            this.Shown += new System.EventHandler(this.DolphinLauncher_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -84,6 +93,7 @@
         private System.Windows.Forms.ProgressBar DownloadBar;
         private System.Windows.Forms.Label speed;
         private System.Windows.Forms.Label Downloaded;
+        private System.Windows.Forms.TextBox Update_Text;
     }
 }
 
