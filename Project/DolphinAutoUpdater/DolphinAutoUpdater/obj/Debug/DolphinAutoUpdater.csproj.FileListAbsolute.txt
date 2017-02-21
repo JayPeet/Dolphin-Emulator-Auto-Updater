@@ -1,0 +1,14 @@
+C:\Users\q5122209\Documents\GitHub\Dolphin-Emulator-Auto-Updater\Project\DolphinAutoUpdater\DolphinAutoUpdater\bin\Debug\DolphinAutoUpdater.exe.config
+C:\Users\q5122209\Documents\GitHub\Dolphin-Emulator-Auto-Updater\Project\DolphinAutoUpdater\DolphinAutoUpdater\bin\Debug\DolphinAutoUpdater.exe
+C:\Users\q5122209\Documents\GitHub\Dolphin-Emulator-Auto-Updater\Project\DolphinAutoUpdater\DolphinAutoUpdater\bin\Debug\DolphinAutoUpdater.pdb
+C:\Users\q5122209\Documents\GitHub\Dolphin-Emulator-Auto-Updater\Project\DolphinAutoUpdater\DolphinAutoUpdater\obj\Debug\DolphinAutoUpdater.csprojResolveAssemblyReference.cache
+C:\Users\q5122209\Documents\GitHub\Dolphin-Emulator-Auto-Updater\Project\DolphinAutoUpdater\DolphinAutoUpdater\obj\Debug\MainWindow.g.cs
+C:\Users\q5122209\Documents\GitHub\Dolphin-Emulator-Auto-Updater\Project\DolphinAutoUpdater\DolphinAutoUpdater\obj\Debug\App.g.cs
+C:\Users\q5122209\Documents\GitHub\Dolphin-Emulator-Auto-Updater\Project\DolphinAutoUpdater\DolphinAutoUpdater\obj\Debug\DolphinAutoUpdater_MarkupCompile.cache
+C:\Users\q5122209\Documents\GitHub\Dolphin-Emulator-Auto-Updater\Project\DolphinAutoUpdater\DolphinAutoUpdater\obj\Debug\DolphinAutoUpdater_MarkupCompile.lref
+C:\Users\q5122209\Documents\GitHub\Dolphin-Emulator-Auto-Updater\Project\DolphinAutoUpdater\DolphinAutoUpdater\obj\Debug\MainWindow.baml
+C:\Users\q5122209\Documents\GitHub\Dolphin-Emulator-Auto-Updater\Project\DolphinAutoUpdater\DolphinAutoUpdater\obj\Debug\DolphinAutoUpdater.g.resources
+C:\Users\q5122209\Documents\GitHub\Dolphin-Emulator-Auto-Updater\Project\DolphinAutoUpdater\DolphinAutoUpdater\obj\Debug\DolphinAutoUpdater.Properties.Resources.resources
+C:\Users\q5122209\Documents\GitHub\Dolphin-Emulator-Auto-Updater\Project\DolphinAutoUpdater\DolphinAutoUpdater\obj\Debug\DolphinAutoUpdater.csproj.GenerateResource.Cache
+C:\Users\q5122209\Documents\GitHub\Dolphin-Emulator-Auto-Updater\Project\DolphinAutoUpdater\DolphinAutoUpdater\obj\Debug\DolphinAutoUpdater.exe
+C:\Users\q5122209\Documents\GitHub\Dolphin-Emulator-Auto-Updater\Project\DolphinAutoUpdater\DolphinAutoUpdater\obj\Debug\DolphinAutoUpdater.pdb
